@@ -1,0 +1,7 @@
+body {
+  font-family: verdana;
+}
+
+.complete {
+  text-decoration: line-through;
+}
