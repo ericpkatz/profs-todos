@@ -87,7 +87,9 @@ function App() {
           todos.map( todo => {
             return (
               <li key={ todo.id } className={ todo.isComplete ? 'complete': ''}>{ todo.name }
-                { ((new Date() - new Date(todo.updatedAt))/1000).toFixed(2) }
+                <p>
+                updated { ((new Date() - new Date(todo.updatedAt))/1000).toFixed(1) } seconds ago
+                </p>
                 <button onClick={ ()=> toggle(todo)}>toggle</button>
                 <button onClick={ ()=> destroy(todo)}>destroy</button>
               </li>
